@@ -26,10 +26,10 @@ const { loadSightings } = require("./utils/dataLoader");
 const express = require("express");
 const path = require("path");
 const app = express();
-const PORT = 3000;
-app.use(express.static("public"));
+const PORT = process.env.PORT || 3000;
+app.use(express.static(path.join(__dirname, "public")));
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "views/index.html"));
+    res.sendFile(path.join(__dirname, "views/index.html"));
 });
 app.get("/api/sightings", async (req, res) => {
   try {
@@ -108,6 +108,9 @@ app.get("/api/sightings/recent", async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 });
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
+if (process.env.NODE_ENV !== "production") {
+    app.listen(PORT, () => {
+        console.log("Server running on port 3000");
+    });
+}
+module.exports = app;
