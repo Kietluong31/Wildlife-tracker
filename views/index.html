@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Wildlife Sighting Tracker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Luong Tuan Kiet</h1>
+      <p class="subtitle">Wildlife Sighting Tracker</p>
+    </div>
+  </header>
+  <main class="container">
+    <section class="card">
+      <h2>About Me</h2>
+      <div class="about-grid">
+        <img class="profile" src="/images/Luong Tuan Kiet.jpg" alt="Luong Tuan Kiet" />
+        <div>
+          <p>
+            Hi! I'm <strong>Luong Tuan Kiet</strong>. I’m studying web development and I enjoy building
+            practical apps with Node.js and Express.
+          </p>
+          <ul class="info">
+            <li><strong>Program:</strong> Computer Programing and Anaylist</li>
+            <li><strong>Interests:</strong> Playing sports and video games</li>
+            <li><strong>Why web development:</strong> because I want to develop web and strengthen my skill</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="card">
+      <h2>Project Description</h2>
+      <p>
+        This Wildlife Sighting Tracker is an Express.js web application that loads wildlife observation
+        records from a local JSON file and provides API endpoints to view and process the data.
+      </p>
+      <p>
+        The API demonstrates async data loading, JSON processing, and array methods such as
+        filter(), map(), find(), and findIndex().
+      </p>
+    </section>
+    <section class="card">
+      <h2>API Endpoints</h2>
+      <p>Try these routes:</p>
+      <ul class="endpoints">
+        <li><a href="/api/sightings">GET /api/sightings</a> — all sightings</li>
+        <li><a href="/api/sightings/verified">GET /api/sightings/verified</a> — verified only</li>
+        <li><a href="/api/sightings/species-list">GET /api/sightings/species-list</a> — unique species names</li>
+        <li><a href="/api/sightings/habitat/forest">GET /api/sightings/habitat/forest</a> — forest sightings + count</li>
+        <li><a href="/api/sightings/search/eagle">GET /api/sightings/search/eagle</a> — first “eagle” match</li>
+        <li><a href="/api/sightings/find-index/moose">GET /api/sightings/find-index/moose</a> — index of Moose + record</li>
+        <li><a href="/api/sightings/recent">GET /api/sightings/recent</a> — 3 most recent sightings</li>
+      </ul>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <p>Luong Tuan Kiet — 2026-02-06</p>
+    </div>
+  </footer>
+</body>
+</html>
